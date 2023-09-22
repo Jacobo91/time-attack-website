@@ -16,11 +16,6 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
 return (
 <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-<h2 className="absolute top-40 mt-10 ml-4 text-2xl" >
-    Tiempos Recientes
-    <span className="absolute left-0 right-0  h-[2px] bg-white mt-8 w-[300px] sm:w-[500px]"></span>
-</h2>
-
     <div className="sticky top-0 flex h-screen items-center overflow-hidden">
     <motion.div style={{ x }} className="flex gap-4">
         {cards.map((card: CardType) => {
