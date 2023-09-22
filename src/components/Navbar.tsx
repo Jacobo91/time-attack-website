@@ -29,7 +29,7 @@ useEffect(() => {
 
 return (
     <nav 
-        className="font-bold absolute w-full top-0 z-50 h-20 text-white rounded-md bg-opacity-0 backdrop-blur-[4px] sm:backdrop-blur-[10px] border border-opacity-0  border-none flex justify-between items-center px-10"
+        className="font-bold sticky w-full top-0 z-50 h-20 text-white rounded-md bg-opacity-0 backdrop-blur-[4px] sm:backdrop-blur-[10px] border border-opacity-0  border-none flex justify-between items-center px-10"
     >
     <Image src={logo} width={50} height={50} alt="logo" />
     <button

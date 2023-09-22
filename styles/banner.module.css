@@ -1,0 +1,41 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.bannerText{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20vw;
+    text-align: center;
+    font-weight: 800;
+    line-height: 0.85em;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.95);
+    mix-blend-mode: multiply;
+}
+
+.bannerSpan{
+    font-size: 0.4em;
+    line-height: 0.85em;
+}
+
+.bannerVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+
+}
