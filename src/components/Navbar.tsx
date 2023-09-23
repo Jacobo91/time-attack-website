@@ -4,32 +4,17 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import { motion } from "framer-motion"
-import { useEffect } from "react";
 import Link from "next/link"
 import styles from "../../styles/navbar.module.css"
 
 
 export default function Navbar() {
 
-const [width, setWidth] = useState(0)
 const [isOpen, setIsOpen] = useState(false);
 
 function toggleMenu() {
     setIsOpen((prev) => !prev);
 }
-
-useEffect(() => {
-if (typeof window !== "undefined") {
-    setWidth(window.innerWidth);
-
-    if (width > 640) {
-    setIsOpen(true);
-    } else {
-    setIsOpen(false);
-    }
-    }
-}, [width]);
-
 return (
     <nav 
         className={styles.navbar}
