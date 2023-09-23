@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 export default function Navbar() {
 
-const [width, setWidth] = useState(window.innerWidth)
+const [width, setWidth] = useState(0)
 const [isOpen, setIsOpen] = useState(false);
 
 function toggleMenu() {
@@ -18,14 +18,17 @@ function toggleMenu() {
 }
 
 useEffect(() => {
+// Check if we are in the browser environment before accessing window.innerWidth
+if (typeof window !== "undefined") {
+    setWidth(window.innerWidth);
 
-    if(window.innerWidth > 640){
-        setIsOpen(true)
+    if (window.innerWidth > 640) {
+    setIsOpen(true);
     } else {
-        setIsOpen(false)
+    setIsOpen(false);
     }
-
-}, [width])
+    }
+}, []);
 
 return (
     <nav 
