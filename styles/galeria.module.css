@@ -1,0 +1,32 @@
+/* Galeria.module.css */
+
+.galleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 0;
+  }
+  
+  .imageContainer {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .image {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .caption {
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF5EE;
+  }
+  
