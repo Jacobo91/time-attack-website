@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 5rem 0;
+    background: linear-gradient(0deg, rgba(24,24,24,1) 6%, rgba(3,2,0,1) 80%);
   }
   
   .imageContainer {
