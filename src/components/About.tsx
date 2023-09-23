@@ -1,28 +1,12 @@
 "use client";
 import styles from "../../styles/about.module.css";
-import { useEffect, useRef, useState } from "react";
+import useObserver from "../../hooks/useObserver"
+
 
 export default function About() {
-
-const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
-const animationTarget = useRef(null);
-
-useEffect(() => {
-const element = animationTarget.current;
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        setIsIntersecting(entry.isIntersecting)
-    });
-},  {
-        threshold: 0.8,
-    }
-);
-if (element) {
-    observer.observe(element);
-}
-}, []);
-
+const [ isIntersecting, animationTarget  ] = useObserver( {
+    threshold: 0.5,
+});
 return (
     <section ref={animationTarget} role="about" className={styles.wrapper}>
         <svg
