@@ -5,7 +5,7 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import { motion } from "framer-motion"
 import { useEffect } from "react";
-
+import Link from "next/link"
 
 
 export default function Navbar() {
@@ -18,17 +18,16 @@ function toggleMenu() {
 }
 
 useEffect(() => {
-// Check if we are in the browser environment before accessing window.innerWidth
 if (typeof window !== "undefined") {
     setWidth(window.innerWidth);
 
-    if (window.innerWidth > 640) {
+    if (width > 640) {
     setIsOpen(true);
     } else {
     setIsOpen(false);
     }
     }
-}, []);
+}, [width]);
 
 return (
     <nav 
@@ -72,8 +71,15 @@ return (
             duration:"0.5"
         }}
     >
-        <li>Home</li>
-        <li>Gallery</li>
+        <li>
+            <Link href="/" onClick={() => setIsOpen(false)} >Inicio</Link>
+        </li>
+        <li>
+            <Link href='/tiempos' onClick={() => setIsOpen(false)}>Tiempos</Link>
+        </li>
+        <li>
+            <Link href='/galeria' onClick={() => setIsOpen(false)}>Galeria</Link>
+        </li>
     </motion.ul>
     </nav>
 );

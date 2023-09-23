@@ -13,7 +13,6 @@ export default function Podium() {
       <article
         className={`${styles.winnerCard} ${styles.card1} ${styles.badge}`}
       >
-
         <div className={styles.innerBadgeCard} >
           <Image
               src={medallaOro}
@@ -26,7 +25,6 @@ export default function Podium() {
               <h2 className="text-xl">Jacobo Velasquez</h2>
             </div>
         </div>
-
       </article>
 
       <article

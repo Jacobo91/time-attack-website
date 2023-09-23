@@ -30,12 +30,18 @@
     line-height: 0.85em;
 }
 
-.bannerVideo{
+.bannerImage{
     position: absolute;
     top: 0;
     left: 0;
     width:100%;
     height: 100%;
     object-fit: cover;
+    object-position: -50px;
+}
 
+@media screen and (max-width: 1240px){
+    .bannerText{
+        font-size: 22vw;
+    }
 }
