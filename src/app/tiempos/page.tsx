@@ -1,5 +1,12 @@
+import styles from "../../../styles/tiempos.module.css"
+
 export default function Tiempos() {
     return(
-        <h1>Tiempos</h1>
+        <section
+            role="tiempos"
+            className={styles.wrapper}
+        >
+
+        </section>
     )
 }
