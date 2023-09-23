@@ -1,10 +1,10 @@
-import styles from "../../styles/about.module.css"
+import styles from "../../styles/podium.module.css"
 import Image from "next/image"
 import medallaOro from "../../public/medallaOro.png"
 import medallaPlata from "../../public/medallaPlata.png"
 import medallaBronce from "../../public/medallaBronce.png"
 
-export default function About() {
+export default function Podium() {
   return(
     <section
     className={styles.cardsWrapper}

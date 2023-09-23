@@ -1,0 +1,126 @@
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(104, 104, 104); /* Change the background color as needed */
+    clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+    background-image: url("https://wallpapercave.com/wp/wp4216596.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card1{
+    grid-area: card1;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.winnerCard{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(104, 104, 104);
+    clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+    background-image: url("https://wallpapercave.com/wp/wp4216596.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.cardsWrapper{
+    display: grid;
+    padding: 5rem 0;
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    ;
+    gap: 20px;
+    place-items: center;
+}
+
+.badge{
+    display: grid;
+    place-items: center;
+}
+
+.badgeImage{
+    align-self: flex-end;
+}
+
+.badgeText{
+    align-self: flex-start;
+    color: black;
+}
+
+.innerBadgeCard{
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);    
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+
+@media screen and (min-width: 425px) {
+    .card{
+        width: 350px;
+        height: 350px;
+    }
+
+    .winnerCard{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+
+    .winnerCard{
+        width: 250px;
+        height: 250px;
+    }
+
+    .cardsWrapper{
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card3"
+        ;
+        gap: 20px;
+        padding: 5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+
+    .winnerCard{
+        width: 350px;
+        height: 350px;
+    }
+
+    .cardsWrapper{
+        grid-template-areas: 
+        "card2 card1 card3"
+        ;
+        padding: 5rem;
+    }
+}
+
+
